@@ -59,3 +59,24 @@ nav,
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+    .menu {
+        display: block;
+    }
+    .menu ion-icon {
+        font-size: 5rem;
+    }
+    nav {
+        display: none;
+    }
+}
