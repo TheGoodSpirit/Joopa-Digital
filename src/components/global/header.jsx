@@ -1,5 +1,4 @@
 import Button from '../button.jsx';
-import Logo from '../../assets/Images/logo.png';
 import '../../index.css';
 
 const  Header = () => {
