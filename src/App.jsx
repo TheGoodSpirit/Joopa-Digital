@@ -16,6 +16,9 @@ function App() {
       {/* Section component */}
       <Section name={"home"} />
       <Section name={"about"} />
+      <Section name={"services"} />
+      <Section name={"CTA"} />
+      <Section name={"How We Work"} />
 
 
 

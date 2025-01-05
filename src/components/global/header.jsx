@@ -4,7 +4,7 @@ import '../../index.css';
 
 const  Header = () => {
     return <>
-        <header className="bg-white w-full fixed bg-opacity-20 backdrop-filter backdrop-blur-2xl flex justify-between items-center p-4 shadow-sm">
+        <header className=" z-10 bg-white w-full fixed bg-opacity-20 backdrop-filter backdrop-blur-2xl flex justify-between items-center p-4 shadow-sm">
             <img src="" alt="Company Logo" className="logo" />
             <nav>
                 <ul className="gap-5 flex justify-evenly items-center">
