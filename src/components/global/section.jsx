@@ -86,7 +86,7 @@ const Section = ({ name }) => {
                             <ServiceCard name="Social Media Management" img={img02} price={99} />
                         </div>
                         <div className='flex justify-center'>
-                            <Button value="Explore All Services &#8594;" className={"bg-[#FC6A02] hover:bg-[#C65301] hover:shadow-sm ml-5"} />
+                            <Button value="Explore All Services &#8594;" className={"!text-[#FC6A02] hover:shadow-sm ml-5"} />
                         </div>
                     </div>
                 </section>
@@ -123,13 +123,13 @@ const Section = ({ name }) => {
                     <div class="max-w-4xl mx-auto text-center">
                         <h2 class="text-4xl font-bold mb-4">How We Works</h2>
                         <p class="text-lg text-gray-500 mb-12">
-                            Delving into the intricacies of everything from technology and nature to societal structures, this book offers readers a comprehensive understanding of how things function.
+                            Delving into the intricacies of everything from technology and nature to societal structures, this company offers a comprehensive understanding of how things function.
                         </p>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                        <StepCard step={1} name={"Create your account"} desc={"\"Create Your Account\" is your step-by-step guide to establishing a personalized online presence tailored to your needs. This comprehensive handbook walks you through the process of setting."}/>
-                        <StepCard step={2} name={"Create your account"} desc={"\"Create Your Account\" is your step-by-step guide to establishing a personalized online presence tailored to your needs. This comprehensive handbook walks you through the process of setting."}/>
-                        <StepCard step={3} name={"Create your account"} desc={"\"Create Your Account\" is your step-by-step guide to establishing a personalized online presence tailored to your needs. This comprehensive handbook walks you through the process of setting."}/>
-                        <StepCard step={4} name={"Create your account"} desc={"\"Create Your Account\" is your step-by-step guide to establishing a personalized online presence tailored to your needs. This comprehensive handbook walks you through the process of setting."}/>
+                            <StepCard step={1} name={"Create a Project"} desc={"Explore the future with our visionary innovation project."} />
+                            <StepCard step={2} name={"Invite Transaction Members"} desc={"An exclusive opportunity awaits, encouraging collaboration."} />
+                            <StepCard step={3} name={"Being Collaborating"} desc={"Team up with us for an adventure incooperation and new ideas."} />
+                            <StepCard step={4} name={"Close Deal"} desc={"Secure success as deals flow smoothly and effortlessly."} />
                         </div>
                     </div>
                 </section>

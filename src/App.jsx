@@ -8,21 +8,14 @@ import './index.css';
 function App() {
   return (
     <>
-      {/* global component */}
       <Header />
 
-
-
-      {/* Section component */}
       <Section name={"home"} />
       <Section name={"about"} />
       <Section name={"services"} />
       <Section name={"CTA"} />
       <Section name={"How We Work"} />
-
-
-
-      {/* global component */}
+      
       <Footer />
     </>
   );
