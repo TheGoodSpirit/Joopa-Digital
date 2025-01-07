@@ -1,7 +1,7 @@
 import React from "react";
-import HomeSection from "../sections/HomeSection.jsx";
-import AboutSection from "../sections/AboutSection.jsx";
-import ServicesSection from "../sections/ServicesSection.jsx";
+import HomeSection from "../Sections/HomeSection.jsx";
+import AboutSection from "../Sections/AboutSection.jsx";
+import ServicesSection from "../Sections/ServicesSection.jsx";
 import CTASection from "../Sections/CTASection.jsx";
 import HowWeWorkSection from "../Sections/HowWeWorkSection.jsx";
 
