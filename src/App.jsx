@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from 'react';
 import Header from './components/global/header.jsx';
 import Footer from './components/global/footer.jsx';
@@ -6,16 +5,22 @@ import Section from './components/global/section.jsx';
 import './index.css';
 
 function App() {
+  const sections = [
+    { name: "hero" },
+    { name: "about" },
+    { name: "services" },
+    { name: "CTA" },
+    { name: "How We Work" },
+    { name: "Testimonials" },
+    { name: "Contact Us"}
+  ];
+
   return (
     <>
       <Header />
-
-      <Section name={"home"} />
-      <Section name={"about"} />
-      <Section name={"services"} />
-      <Section name={"CTA"} />
-      <Section name={"How We Work"} />
-      
+      {sections.map((section, index) => (
+        <Section key={index} name={section.name} />
+      ))}
       <Footer />
     </>
   );

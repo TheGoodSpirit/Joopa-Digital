@@ -1,56 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../button.jsx';
-import '../../index.css';
+import Button from '../Button/button.jsx';
 import logo from '../../assets/Images/Logo.png';
 import { RiMenuUnfold4Line } from "react-icons/ri";
 import DropdownMenu from '../dropdownMenu.jsx';
 
 const Header = () => {
-    const [top, setTop] = useState(false);
-
+    
+    const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            setTop(window.scrollY > 0);
+            setIsScrolled(window.scrollY > 0);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const navItems = [
+        { name: "Home", href: "/", visible: false },
+        { name: "About", href: "/about", visible: true },
+        { name: "Services", href: "/services", visible: true },
+        { name: "Certificates", href: "/certificates", visible: true },
+        { name: "Contact", href: "/contact", visible: true },
+        
+    ];
+
     return (
-        <>
-            <header
-                className={`bg-gradient-to-r from-[#271F53] to-[#3D3D96] z-10 h-[100px] w-full fixed bg-opacity-50 backdrop-filter backdrop-blur-3xl flex justify-around items-center px-10 py-2 max-sm:px-4
-                    ${!top ? '' : 'bg-white shadow-lg'}`}
-            >
-                <div className="flex flex-wrap items-center lg:gap-y-2 gap-y-4 gap-x-4 w-full max-w-screen-xl mx-auto">
-                    <a href="#">
-                        <img src={logo} alt="Company Logo" className="w-[100px] top-0" />
-                    </a>
-                </div>
-                <nav>
-                    <ul className="gap-5 flex justify-evenly items-center max-sm:hidden">
-                        {/* <li>
-                            <a className="text-white hover:text-[#FC6A02]" href="/">Home</a>
-                        </li> */}
-                        <li>
-                        <DropdownMenu />
-                        </li>
-                        <li>
-                            <a className="text-white hover:text-[#FC6A02]" href="/services">Services</a>
-                        </li>
-                        <li>
-                            <a className="text-white hover:text-[#FC6A02]" href="/certificates">Certificates</a>
-                        </li>
-                        <li>
-                            <a className="text-white hover:text-[#FC6A02]" href="/contact">Contact</a>
-                        </li>
-                    </ul>
+        <header
+            className={`fixed z-10 w-full h-[100px] px-10 py-2 flex items-center justify-between bg-gradient-to-r from-[#271F53] to-[#3D3D96] 
+                ${isScrolled ? 'bg-white shadow-lg bg-opacity-100' : 'bg-opacity-50 backdrop-filter backdrop-blur-3xl'}`}
+        >
+            <div className="max-w-screen-xl flex items-center justify-between w-full mx-auto">
+                {/* Logo */}
+                <a href="/">
+                    <img src={logo} alt="Company Logo" className="w-[100px]" />
+                </a>
+
+                {/* Navigation */}
+                <nav className="max-sm:hidden lg:flex md:flex sm:flex items-center gap-5">
+                    {navItems
+                        .filter(item => item.visible)
+                        .map((item) => (
+                            item.name === "About" ? (
+                                <DropdownMenu key={item.name} /> // Show DropdownMenu for "About"
+                            ) : (
+                                <li key={item.name} className="list-none">
+                                    <a
+                                        href={item.href}
+                                        className={`text-white hover:text-[#FC6A02] ${isScrolled && 'text-gray-900'}`}
+                                    >
+                                        {item.name}
+                                    </a>
+                                </li>
+                            )
+                        ))}
                 </nav>
-                <div className="text-3xl hidden max-sm:block text-white">
-                    <Button value={<RiMenuUnfold4Line />} className={"bg-[#FC6A02] rounded-lg"} /> 
+
+                {/* Mobile Menu Button */}
+                <div className="sm:hidden">
+                    <Button value={<RiMenuUnfold4Line />} className="bg-[#FC6A02] rounded-lg text-white text-3xl" />
                 </div>
-            </header>
-        </>
+            </div>
+        </header>
     );
 };
 
