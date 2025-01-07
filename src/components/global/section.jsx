@@ -1,9 +1,9 @@
 import React from "react";
-import HomeSection from "../Sections/HomeSection.jsx";
-import AboutSection from "../Sections/AboutSection.jsx";
-import ServicesSection from "../Sections/ServicesSection.jsx";
-import CTASection from "../Sections/CTASection.jsx";
-import HowWeWorkSection from "../Sections/HowWeWorkSection.jsx";
+import HomeSection from "../Parts/HomeSection.jsx";
+import AboutSection from "../Parts/AboutSection.jsx";
+import ServicesSection from "../Parts/ServicesSection.jsx";
+import CTASection from "../Parts/CTASection.jsx";
+import HowWeWorkSection from "../Parts/HowWeWorkSection.jsx";
 
 const sectionsData = [
     {
