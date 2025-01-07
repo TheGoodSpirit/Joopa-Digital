@@ -3,7 +3,6 @@ import Button from '../button';
 import vid01 from "../../assets/Vid/vid01.mp4";
 import img01 from "../../assets/Images/img-1.jpg";
 import img02 from "../../assets/Images/img-2.png";
-import { BsCheckCircleFill } from "react-icons/bs";
 import ServiceCard from '../serviceCard.jsx';
 import StepCard from '../stepCard.jsx';
 
@@ -13,7 +12,7 @@ const Section = ({ name }) => {
         return (
             <>
                 <section className="bg-gradient-to-r from-[#271F53] to-[#3D3D96]">
-                    <div className="gap-16 items-center py-8 pt-32 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                    <div className="gap-16 items-center py-8 pt-32 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-10 lg:px-6">
                         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                             <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">"Empowering Innovation,
                                 Securing Solutions –Your IT Partner for the Future!"</h1>
@@ -21,10 +20,10 @@ const Section = ({ name }) => {
                             <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
 
                             <Button value="Learn more" className={"mt-8 bg-[#FC6A02] hover:bg-[#C65301] hover:shadow-sm"} />
-                            <Button value="Learn more" className={"ml-8 hover:bg-transparent"} />
+                            {/* <Button value="Learn more" className={"ml-8 hover:bg-transparent"} /> */}
                         </div>
 
-                        <div className="hidden grid-cols-1 gap-4 mt-8 lg:grid">
+                        <div className="hidden grid-cols-1 gap-4 mt-20 lg:grid">
                             <video
                                 className="w-full rounded-lg"
                                 src={vid01}
@@ -41,7 +40,7 @@ const Section = ({ name }) => {
         return (
             <>
                 <section class="bg-gray-100">
-                    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                    <div class="container mx-auto py-16 px-4 sm:px-6 max-sm:py-5 lg:px-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
                             <div class="mt-12 md:mt-0">
                                 <img src={img01} alt="About Us Image" class="object-cover rounded-lg " />
@@ -54,7 +53,7 @@ const Section = ({ name }) => {
                                     Mauris eleifend velit a pretium iaculis. Donec sagittis velit et magna euismod, vel aliquet nulla
                                     malesuada. Nunc pharetra massa lectus, a fermentum arcu volutpat vel.</p>
                                 <ul class="mt-8 ml-8 text-gray-600 font-semibold marker:text-[#FC6A02] list-disc">
-                                    <li> {BsCheckCircleFill}Innovative Digital Experts</li>
+                                    <li>Innovative Digital Experts</li>
                                     <li>Client-Focused Approach</li>
                                     <li>Proven Excellence</li>
                                     <li>Future-Ready Vision</li>
