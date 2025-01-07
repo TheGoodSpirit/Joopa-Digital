@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../button.jsx';
 import '../../index.css';
-import logo from '../../assets/Images/logo.png';
+import logo from '../../assets/Images/Logo.png';
 import { RiMenuUnfold4Line } from "react-icons/ri";
 import DropdownMenu from '../dropdownMenu.jsx';
 
